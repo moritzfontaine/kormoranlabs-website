@@ -197,6 +197,25 @@
   .contact h2 { margin: 0.4rem 0 1rem; }
   .note { font-style: italic; color: var(--muted); margin: 0; font-size: 1.15rem; }
 
+  /* Product screens, in a simple phone outline; a swipeable strip on narrow screens. */
+  .screens { list-style: none; margin: 0 0 3rem; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1rem, 2.4vw, 2rem); }
+  .screens figure { margin: 0; }
+  .phone { padding: 0.4rem; border: 1px solid var(--hairline); border-radius: 2rem; background: var(--panel); }
+  .phone img { width: 100%; height: auto; aspect-ratio: 393 / 852; border-radius: 1.6rem; }
+  .screens figcaption { margin-top: 0.9rem; text-align: center; }
+  @media (max-width: 52rem) {
+    .screens {
+      display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+      margin-left: -1.5rem; margin-right: -1.5rem; padding: 0 1.5rem 0.5rem; scroll-padding: 0 1.5rem;
+      scrollbar-width: none;
+    }
+    .screens::-webkit-scrollbar { display: none; }
+    .screens li { flex: 0 0 min(62%, 15rem); scroll-snap-align: start; }
+  }
+  @media (max-width: 30rem) {
+    .screens { margin-left: -1rem; margin-right: -1rem; padding: 0 1rem 0.5rem; scroll-padding: 0 1rem; }
+  }
+
   .facts { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; padding: 0; margin: 0 0 2.75rem; }
   .facts li {
     font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
@@ -277,6 +296,33 @@
         <p>The minutes you would give a feed: a feed never ends and leaves nothing behind. A session ends, and takes something of yours a step further.</p>
       </div>
 
+      <ul class="screens" aria-label="Minute Studio screens">
+        <li>
+          <figure>
+            <div class="phone"><img src="assets/screens/minute-studio-course.webp" width="393" height="852" loading="lazy" decoding="async" alt="The Blind contour course page: fourteen days of drawing, about seven minutes a day, with day 1 open without an account."></div>
+            <figcaption class="label">A course</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="phone"><img src="assets/screens/minute-studio-question.webp" width="393" height="852" loading="lazy" decoding="async" alt="A question from Finding the stars, answered, with the explanation of why the right answer is right."></div>
+            <figcaption class="label">Guess first</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="phone"><img src="assets/screens/minute-studio-practice.webp" width="393" height="852" loading="lazy" decoding="async" alt="A two-minute task: draw the night sky you know from memory, the same task every time to compare side by side."></div>
+            <figcaption class="label">Practise on paper</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="phone"><img src="assets/screens/minute-studio-sky.webp" width="393" height="852" loading="lazy" decoding="async" alt="An interactive star map: follow the pointers of the Plough and tap the star you land on."></div>
+            <figcaption class="label">Find it in the sky</figcaption>
+          </figure>
+        </li>
+      </ul>
+
       <ul class="points">
         <li>
           <p class="label">Short sessions</p>
@@ -326,6 +372,33 @@
         <li>Complete</li>
         <li>Improve</li>
       </ol>
+
+      <ul class="screens" aria-label="Reverun screens">
+        <li>
+          <figure>
+            <div class="phone"><img src="assets/screens/reverun-playbooks.webp" width="393" height="852" loading="lazy" decoding="async" alt="The playbook library: Morning ritual, Weekend trip, End of workday shutdown and Home maintenance, filed by area."></div>
+            <figcaption class="label">Your playbooks</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="phone"><img src="assets/screens/reverun-run.webp" width="393" height="852" loading="lazy" decoding="async" alt="A Weekend trip run in progress, five of eleven steps checked off."></div>
+            <figcaption class="label">A run</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="phone"><img src="assets/screens/reverun-card.webp" width="393" height="852" loading="lazy" decoding="async" alt="A step shown as a card: test the smoke alarms, with an illustration and a button to mark it done."></div>
+            <figcaption class="label">Step by step</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <div class="phone"><img src="assets/screens/reverun-review.webp" width="393" height="852" loading="lazy" decoding="async" alt="The review at the end of a run: what should be better next time, with the changes to carry forward to the playbook."></div>
+            <figcaption class="label">Carry forward</figcaption>
+          </figure>
+        </li>
+      </ul>
 
       <ul class="points">
         <li>

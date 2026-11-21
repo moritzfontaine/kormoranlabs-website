@@ -11,6 +11,7 @@ the repository root (`CNAME`).
 - `assets/minute-studio.png`, `assets/reverun.png`: the products' app icons.
 - `assets/og.png`: the link preview image.
 - `assets/fonts/`: the three typefaces, self-hosted.
+- `assets/screens/`: product screens (WebP, 2x phone size), captured from the Minute Studio and Reverun builds.
 
 Type and colour follow the logo pack: Syne Bold for KORMORAN, Cormorant Garamond for text,
 JetBrains Mono for labels, served from `assets/fonts/` (Latin subset, SIL OFL) so no visitor data goes to Google; Abyss ground, Moonbone text, the emerald eye as the only
