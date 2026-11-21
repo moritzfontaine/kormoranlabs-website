@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kormoran Labs</title>
-<meta name="description" content="Kormoran Labs makes calm software for practice and routine: Minute Studio, courses you practise a few minutes a day, and Reverun, checklists that get better every time you run them.">
+<meta name="description" content="Kormoran Labs. Dive deep. Surface the future. Makers of Minute Studio, courses you practise a few minutes a day, and Reverun, checklists that get better every time you run them.">
 <meta name="theme-color" content="#07090D" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#E9E6DF" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="https://www.kormoranlabs.com/">
@@ -12,15 +12,20 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kormoran Labs">
-<meta property="og:description" content="Calm software for practice and routine: Minute Studio and Reverun.">
+<meta property="og:title" content="Kormoran Labs: Dive deep. Surface the future.">
+<meta property="og:description" content="Tools for getting better, a little at a time: Minute Studio and Reverun.">
 <meta property="og:url" content="https://www.kormoranlabs.com/">
 <meta property="og:image" content="https://www.kormoranlabs.com/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700&display=swap">
+<link rel="preload" href="assets/fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* Fonts are served from this site (SIL Open Font License, Latin subset), never from Google. */
+  @font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 300 700; font-display: swap; src: url(assets/fonts/cormorant-garamond.woff2) format("woff2"); }
+  @font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 300 700; font-display: swap; src: url(assets/fonts/cormorant-garamond-italic.woff2) format("woff2"); }
+  @font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 100 800; font-display: swap; src: url(assets/fonts/jetbrains-mono.woff2) format("woff2"); }
+  @font-face { font-family: "Syne"; font-style: normal; font-weight: 400 800; font-display: swap; src: url(assets/fonts/syne.woff2) format("woff2"); }
+
   /* Kormoran Labs colours (logo pack v1). The eye is the only accent. */
   :root {
     --abyss: #07090D;
@@ -112,16 +117,23 @@
   .top nav a:hover { color: var(--text); }
   @media (max-width: 40rem) {
     .brand .wordmark { display: none; }
-    .top nav { gap: 1.25rem; }
+    .top nav { gap: 1rem; }
+    .top nav a { font-size: 0.7rem; letter-spacing: 0.1em; }
   }
 
   /* Hero */
   .hero { padding: clamp(3.5rem, 10vw, 7.5rem) 0 clamp(3.5rem, 9vw, 6.5rem); }
-  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
   .hero h1 {
     font-family: var(--serif); font-style: italic; font-weight: 400;
-    font-size: clamp(2.6rem, 6.4vw, 4.75rem); line-height: 1.04; letter-spacing: -0.01em;
-    margin: 1.25rem 0 1.5rem; text-wrap: balance;
+    font-size: clamp(2.9rem, 7.4vw, 5.75rem); line-height: 1.02; letter-spacing: -0.015em;
+    margin: 1.25rem 0 1.25rem;
+  }
+  .hero h1 span { display: block; }
+  .hero .tagline {
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: clamp(1.45rem, 2.6vw, 1.9rem); line-height: 1.3; margin: 0 0 1.5rem;
+    padding-left: 1rem; border-left: 2px solid var(--accent);
   }
   .hero .lede { color: var(--muted); max-width: 32rem; margin: 0; }
   .hero .mark { width: 100%; max-width: 24rem; justify-self: end; }
@@ -181,6 +193,8 @@
   @media (prefers-color-scheme: light) { .button:hover { color: var(--moonbone); } }
   .button .arrow { transition: transform .15s ease; }
   .button:hover .arrow { transform: translateX(3px); }
+  .button.email { text-transform: none; letter-spacing: 0.04em; font-size: 0.9rem; }
+  .contact h2 { margin: 0.4rem 0 1rem; }
   .note { font-style: italic; color: var(--muted); margin: 0; font-size: 1.15rem; }
 
   .facts { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; padding: 0; margin: 0 0 2.75rem; }
@@ -227,6 +241,7 @@
     <nav aria-label="Products">
       <a href="#minute-studio">Minute Studio</a>
       <a href="#reverun">Reverun</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -235,9 +250,10 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <p class="label"><span class="eye">&#9679;</span>&nbsp; A small software studio</p>
-        <h1>Tools for getting better, a little at a time.</h1>
-        <p class="lede">We make calm, focused software for practice and routine. No feeds, no streaks, no noise: each product helps you come back tomorrow and do the thing a bit better than today.</p>
+        <p class="label"><span class="eye">&#9679;</span>&nbsp; Kormoran Labs</p>
+        <h1><span>Dive deep.</span> <span>Surface the future.</span></h1>
+        <p class="tagline">Tools for getting better, a little at a time.</p>
+        <p class="lede">The cormorant dives below the surface and comes back with what it went for. We do the same: we go deep into how people learn, practise and improve, and surface products that turn intention into progress.</p>
       </div>
       <svg class="mark" viewBox="4 4 192 192" role="img" aria-label="The Kormoran Labs mark: a cormorant before the moon, above the water"><use href="#kl-mark"/></svg>
     </div>
@@ -280,7 +296,7 @@
       </ul>
 
       <div class="cta-row">
-        <a class="button" href="https://minutestudio.com" rel="noopener">Visit minutestudio.com <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <a class="button" href="https://minute-studio.com" rel="noopener">Visit minute-studio.com <span class="arrow" aria-hidden="true">&rarr;</span></a>
         <p class="note">Unit 1 of every course is open to everyone, no account needed.</p>
       </div>
     </div>
@@ -340,6 +356,19 @@
       <p class="note">Coming soon to the App Store and Google Play.</p>
     </div>
   </section>
+
+  <div class="wrap" aria-hidden="true"><div class="water"><span></span><span></span><span></span><span></span></div></div>
+
+  <section class="product contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <p class="label">Contact</p>
+      <h2 id="contact-title">Write to us.</h2>
+      <p class="claim">Questions, ideas, partnerships or a course you would like to see: we read every message.</p>
+      <div class="cta-row">
+        <a class="button email" href="mailto:write@kormoranlabs.com">write@kormoranlabs.com <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -348,7 +377,7 @@
       <svg class="mark" aria-hidden="true"><use href="#kl-mark-small"/></svg>
       <span class="wordmark"><span class="k">Kormoran</span><span class="l">Labs</span></span>
     </a>
-    <p class="label">&copy; <span id="year">2026</span> Kormoran Labs &middot; <a href="https://minutestudio.com" rel="noopener">Minute Studio</a> &middot; <a href="#reverun">Reverun</a></p>
+    <p class="label">&copy; <span id="year">2026</span> Kormoran Labs &middot; <a href="mailto:write@kormoranlabs.com">write@kormoranlabs.com</a></p>
   </div>
 </footer>
 

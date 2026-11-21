@@ -1,7 +1,7 @@
 # kormoranlabs-website
 
 The one-page site for [kormoranlabs.com](https://www.kormoranlabs.com): Kormoran Labs and its two
-products, [Minute Studio](https://minutestudio.com) and Reverun.
+products, [Minute Studio](https://minute-studio.com) and Reverun.
 
 Plain static files, no build step. `index.html` holds the page and its styles; GitHub Pages serves
 the repository root (`CNAME`).
@@ -10,8 +10,9 @@ the repository root (`CNAME`).
 - `assets/brand/`: the logo pack v1 (marks, lockups, colours and rules in `README.txt`).
 - `assets/minute-studio.png`, `assets/reverun.png`: the products' app icons.
 - `assets/og.png`: the link preview image.
+- `assets/fonts/`: the three typefaces, self-hosted.
 
 Type and colour follow the logo pack: Syne Bold for KORMORAN, Cormorant Garamond for text,
-JetBrains Mono for labels (Google Fonts); Abyss ground, Moonbone text, the emerald eye as the only
+JetBrains Mono for labels, served from `assets/fonts/` (Latin subset, SIL OFL) so no visitor data goes to Google; Abyss ground, Moonbone text, the emerald eye as the only
 accent. The page follows the system's light or dark setting. Preview it by opening `index.html`
 or with `python3 -m http.server`.
