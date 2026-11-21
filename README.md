@@ -1,1 +1,17 @@
 # kormoranlabs-website
+
+The one-page site for [kormoranlabs.com](https://www.kormoranlabs.com): Kormoran Labs and its two
+products, [Minute Studio](https://minutestudio.com) and Reverun.
+
+Plain static files, no build step. `index.html` holds the page and its styles; GitHub Pages serves
+the repository root (`CNAME`).
+
+- `favicon.svg`, `favicon.ico`, `apple-touch-icon-180.png`: tab and home-screen icons.
+- `assets/brand/`: the logo pack v1 (marks, lockups, colours and rules in `README.txt`).
+- `assets/minute-studio.png`, `assets/reverun.png`: the products' app icons.
+- `assets/og.png`: the link preview image.
+
+Type and colour follow the logo pack: Syne Bold for KORMORAN, Cormorant Garamond for text,
+JetBrains Mono for labels (Google Fonts); Abyss ground, Moonbone text, the emerald eye as the only
+accent. The page follows the system's light or dark setting. Preview it by opening `index.html`
+or with `python3 -m http.server`.
