@@ -244,3 +244,15 @@ footer .label a:hover { color: var(--text); }
 
 /* No lonely last words in short text. */
 .lede, .product .body p, .points p, .claim, .note { text-wrap: pretty; }
+
+/* The testing notice in the hero: a quiet panel with the eye as the "live" dot. */
+.hero .testing {
+  margin: 2rem 0 0; max-width: 32rem; padding: 1rem 1.25rem;
+  border: 1px solid var(--hairline); border-radius: 0.75rem; background: var(--panel);
+  font-size: 1.15rem; font-weight: 500; line-height: 1.45; text-wrap: pretty;
+}
+.hero .testing .label { display: block; margin-bottom: 0.35rem; color: var(--accent); }
+.hero .testing a { white-space: nowrap; text-decoration-color: var(--accent); text-underline-offset: 0.2em; }
+.hero .testing a:hover { color: var(--accent); }
+.label .eye { color: var(--accent); }
+.feedback-hint { margin: -0.25rem 0 1.75rem; }
