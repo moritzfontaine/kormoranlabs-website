@@ -239,3 +239,5 @@ footer .label a:hover { color: var(--text); }
 .legal strong { font-weight: 600; }
 .legal a { text-decoration-color: var(--accent); text-underline-offset: 0.2em; }
 .legal a:hover { color: var(--accent); }
+.legal h3 { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; line-height: 1.25; margin: 2rem 0 0.4rem; }
+.legal h2 + h3 { margin-top: 1rem; }
