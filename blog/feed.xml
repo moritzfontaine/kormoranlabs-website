@@ -8,7 +8,16 @@
   <icon>https://www.kormoranlabs.com/favicon.svg</icon>
   <author><name>Kormoran Labs</name></author>
   <!-- Newest first. Move <updated> here to the newest entry's date. -->
-  <updated>2026-11-25T12:00:00Z</updated>
+  <updated>2026-11-25T18:00:00Z</updated>
+
+  <entry>
+    <title>Your AI wrote you a course. Then it got stuck in the chat.</title>
+    <id>https://www.kormoranlabs.com/blog/ai-courses-out-of-the-chat/</id>
+    <link rel="alternate" type="text/html" href="https://www.kormoranlabs.com/blog/ai-courses-out-of-the-chat/"/>
+    <published>2026-11-25T18:00:00Z</published>
+    <updated>2026-11-25T18:00:00Z</updated>
+    <summary>A model drafts a course in a minute. Then it stays in a chat or an artifact that never asks you anything again. What that costs, and how Minute Studio turns the draft into practice you can share.</summary>
+  </entry>
 
   <entry>
     <title>You are not a goldfish</title>
