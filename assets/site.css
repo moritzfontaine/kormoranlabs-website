@@ -309,19 +309,12 @@ footer .label a:hover { color: var(--text); }
 .sources a.back { text-decoration: none; color: var(--accent); margin-left: 0.25em; }
 .sources li:target { color: var(--text); }
 
-/* Parts a post may use: subheadings, numbered steps, a product screen, a row of panels. */
-.post h3 { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; line-height: 1.25; margin: 2rem 0 0.4rem; }
-.post h2 + h3 { margin-top: 1rem; }
-.post .steps { list-style: none; counter-reset: step; margin: 1.5rem 0 2rem; padding: 0; }
-.post .steps li { counter-increment: step; position: relative; padding-left: 3rem; margin: 0 0 1.1em; }
-.post .steps li::before {
-  content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 0.3em;
-  font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.1em; color: var(--accent);
+/* Code in a post: a short sample, in the label face, on the panel. */
+.post code { font-family: var(--mono); font-size: 0.8em; }
+.post pre {
+  margin: 1.5rem 0 1.75rem; padding: 1.1rem 1.25rem; overflow-x: auto;
+  background: var(--panel); border: 1px solid var(--hairline); border-radius: 0.75rem;
+  font-size: 0.82rem; line-height: 1.6;
 }
-.post .shot { margin: 2rem 0 2.25rem; }
-.post .shot img { width: 100%; max-width: 30rem; height: auto; border-radius: 1rem; border: 1px solid var(--hairline); background: var(--panel); }
-.post .shot figcaption { margin-top: 0.9rem; max-width: 30rem; }
-.post .circles { list-style: none; margin: 1.5rem 0 2rem; padding: 0; display: grid; gap: 1px; background: var(--hairline); border: 1px solid var(--hairline); }
-.post .circles li { background: var(--panel); padding: 1.25rem 1.5rem 1.4rem; margin: 0; }
-.post .circles .label { margin-bottom: 0.5rem; color: var(--accent); }
-.post .circles p:not(.label) { margin: 0; font-size: 1.2rem; line-height: 1.45; }
+/* Long lines wrap on screen; in the file each field is one line. */
+.post pre code { font-size: 1em; white-space: pre-wrap; overflow-wrap: anywhere; }
