@@ -21,7 +21,7 @@ or with `python3 -m http.server`.
 
 ## Writing a blog post
 
-1. Copy `blog/both-products-in-testing/` to `blog/<short-slug>/` and edit its `index.html`: title,
+1. Copy `blog/short-is-not-the-point/` to `blog/<short-slug>/` and edit its `index.html`: title,
    description, canonical and `og:` URLs, the date (both the `datetime` attribute and the text), the
    summary and the text.
 2. Add the post at the top of the list in `blog/index.html`.

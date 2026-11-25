@@ -94,7 +94,7 @@ a { color: inherit; }
   color: var(--muted); text-decoration: none; padding: 0.5rem 0;
 }
 .top nav a:hover { color: var(--text); }
-.top nav a[aria-current="page"] { color: var(--text); }
+.top nav a[aria-current] { color: var(--text); }
 @media (max-width: 40rem) {
   .brand .wordmark { display: none; }
   .top nav { gap: 1rem; }
@@ -293,3 +293,18 @@ footer .label a:hover { color: var(--text); }
 .post p a:not(.button):hover { color: var(--accent); }
 .post .post-end { margin: 2.5rem 0 3rem; }
 .post .post-back { padding-top: 2rem; border-top: 1px solid var(--hairline); }
+.post ul { margin: 0 0 1em; padding-left: 1.2em; }
+.post li { margin: 0 0 0.5em; }
+.post li::marker { color: var(--accent); }
+.post strong { font-weight: 600; }
+.post sup { font-family: var(--mono); font-size: 0.6em; line-height: 0; margin-left: 0.1em; }
+.post sup a { text-decoration: none; color: var(--accent); padding: 0 0.1em; }
+.post :target { scroll-margin-top: 1.5rem; }
+.sources { margin-top: 3rem; padding-top: 0.5rem; border-top: 1px solid var(--hairline); }
+.sources h2 { font-family: var(--mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin: 1.5rem 0 1rem; }
+.sources ol { margin: 0 0 2rem; padding-left: 1.6em; color: var(--muted); font-size: 1.05rem; line-height: 1.45; }
+.sources li { margin: 0 0 0.6em; padding-left: 0.2em; }
+.sources li::marker { font-family: var(--mono); font-size: 0.8em; color: var(--muted); }
+.sources a { text-decoration-color: var(--accent); text-underline-offset: 0.2em; }
+.sources a.back { text-decoration: none; color: var(--accent); margin-left: 0.25em; }
+.sources li:target { color: var(--text); }
