@@ -256,3 +256,64 @@ footer .label a:hover { color: var(--text); }
 .hero .testing a:hover { color: var(--accent); }
 .label .eye { color: var(--accent); }
 .feedback-hint { margin: -0.25rem 0 1.75rem; }
+
+/* Blog: one readable column, like the legal pages, with room for steps, circles and a screen. */
+.post { padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(4rem, 9vw, 6rem); }
+.post .wrap > * { max-width: 42rem; }
+.post .label a { text-decoration: none; }
+.post .label a:hover { color: var(--text); }
+.post h1 {
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; margin: 1rem 0 1.5rem; text-wrap: balance;
+}
+.post .summary {
+  font-style: italic; font-size: clamp(1.35rem, 2.4vw, 1.6rem); line-height: 1.45; text-wrap: pretty;
+  padding-left: 1rem; border-left: 2px solid var(--accent); margin: 0 0 1rem;
+}
+.post h2 {
+  font-family: var(--serif); font-weight: 600; font-size: 1.75rem; line-height: 1.2; text-wrap: balance;
+  margin: 3rem 0 0.9rem; padding-top: 2rem; border-top: 1px solid var(--hairline);
+}
+.post h3 { font-family: var(--serif); font-weight: 600; font-size: 1.35rem; line-height: 1.25; margin: 2rem 0 0.4rem; }
+.post h2 + h3 { margin-top: 1rem; }
+.post p { margin: 0 0 1em; text-wrap: pretty; }
+.post strong { font-weight: 600; }
+.post a { text-decoration-color: var(--accent); text-underline-offset: 0.2em; }
+.post a:hover { color: var(--accent); }
+.post ul { margin: 0 0 1.25em; padding-left: 1.2em; }
+.post li { margin: 0 0 0.6em; }
+.post li::marker { color: var(--accent); }
+
+.post .steps { list-style: none; counter-reset: step; margin: 1.5rem 0 2rem; padding: 0; }
+.post .steps li { counter-increment: step; position: relative; padding-left: 3rem; margin: 0 0 1.1em; }
+.post .steps li::before {
+  content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 0.3em;
+  font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.1em; color: var(--accent);
+}
+
+.post .shot { margin: 2rem 0 2.25rem; }
+.post .shot img {
+  width: 100%; max-width: 30rem; height: auto; border-radius: 1rem;
+  border: 1px solid var(--hairline); background: var(--panel);
+}
+.post .shot figcaption { margin-top: 0.9rem; max-width: 30rem; }
+
+.post .circles {
+  list-style: none; margin: 1.5rem 0 2rem; padding: 0; display: grid; gap: 1px;
+  background: var(--hairline); border: 1px solid var(--hairline);
+}
+.post .circles li { background: var(--panel); padding: 1.25rem 1.5rem 1.4rem; margin: 0; }
+.post .circles .label { margin-bottom: 0.5rem; color: var(--accent); }
+.post .circles p:not(.label) { margin: 0; font-size: 1.2rem; line-height: 1.45; }
+.post .cta-row { margin-top: 2rem; }
+.post .button:hover { color: var(--abyss); }
+@media (prefers-color-scheme: light) { .post .button:hover { color: var(--moonbone); } }
+.post .button { text-decoration: none; }
+
+/* The list of posts. */
+.post .posts { list-style: none; margin: 2.5rem 0 0; padding: 0; }
+.post .posts li { margin: 0; padding: 2rem 0; border-top: 1px solid var(--hairline); }
+.post .posts h2 { border: 0; padding: 0; margin: 0.5rem 0 0.6rem; font-size: clamp(1.6rem, 3.2vw, 2.1rem); font-weight: 500; }
+.post .posts h2 a { text-decoration: none; }
+.post .posts h2 a:hover { color: var(--accent); }
+.post .posts p:not(.label) { color: var(--muted); font-weight: 500; margin: 0; }
