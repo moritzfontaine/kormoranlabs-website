@@ -94,10 +94,16 @@ a { color: inherit; }
   color: var(--muted); text-decoration: none; padding: 0.5rem 0;
 }
 .top nav a:hover { color: var(--text); }
+.top nav a[aria-current] { color: var(--text); }
 @media (max-width: 40rem) {
   .brand .wordmark { display: none; }
   .top nav { gap: 1rem; }
-  .top nav a { font-size: 0.7rem; letter-spacing: 0.1em; }
+  .top nav a { font-size: 0.7rem; letter-spacing: 0.1em; white-space: nowrap; }
+}
+/* The narrowest phones: four links in two tidy rows rather than a word broken in two. */
+@media (max-width: 26rem) {
+  .top nav { flex-wrap: wrap; justify-content: flex-end; column-gap: 1rem; row-gap: 0; }
+  .top nav a { padding: 0.3rem 0; }
 }
 
 /* Hero */
@@ -256,3 +262,49 @@ footer .label a:hover { color: var(--text); }
 .hero .testing a:hover { color: var(--accent); }
 .label .eye { color: var(--accent); }
 .feedback-hint { margin: -0.25rem 0 1.75rem; }
+
+/* Blog: the index of posts and a post, one readable column like the legal pages. */
+.blog { padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(4rem, 9vw, 6rem); }
+.blog .wrap > * { max-width: 42rem; }
+.blog h1 {
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; margin: 1rem 0 1rem; text-wrap: balance;
+}
+.blog .summary {
+  font-style: italic; font-size: clamp(1.35rem, 2.4vw, 1.6rem); line-height: 1.45; text-wrap: pretty;
+  padding-left: 1rem; border-left: 2px solid var(--accent); margin: 0 0 2.5rem;
+}
+.blog .label a { text-decoration: none; }
+.blog .label a:hover { color: var(--text); }
+
+.posts { list-style: none; margin: 0 0 2.5rem; padding: 0; border-top: 1px solid var(--hairline); }
+.posts li { border-bottom: 1px solid var(--hairline); padding: 1.75rem 0; }
+.posts h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.7rem, 3.4vw, 2.2rem); line-height: 1.15; margin: 0.5rem 0 0.5rem; text-wrap: balance; }
+.posts h2 a { text-decoration: none; }
+.posts h2 a:hover { color: var(--accent); }
+.posts p:not(.label) { margin: 0; color: var(--muted); font-weight: 500; text-wrap: pretty; }
+
+.post h2 {
+  font-family: var(--serif); font-weight: 600; font-size: 1.6rem; line-height: 1.2;
+  margin: 2.5rem 0 0.75rem;
+}
+.post p { margin: 0 0 1em; text-wrap: pretty; }
+.post p a:not(.button) { text-decoration-color: var(--accent); text-underline-offset: 0.2em; }
+.post p a:not(.button):hover { color: var(--accent); }
+.post .post-end { margin: 2.5rem 0 3rem; }
+.post .post-back { padding-top: 2rem; border-top: 1px solid var(--hairline); }
+.post ul { margin: 0 0 1em; padding-left: 1.2em; }
+.post li { margin: 0 0 0.5em; }
+.post li::marker { color: var(--accent); }
+.post strong { font-weight: 600; }
+.post sup { font-family: var(--mono); font-size: 0.6em; line-height: 0; margin-left: 0.1em; }
+.post sup a { text-decoration: none; color: var(--accent); padding: 0 0.1em; }
+.post :target { scroll-margin-top: 1.5rem; }
+.sources { margin-top: 3rem; padding-top: 0.5rem; border-top: 1px solid var(--hairline); }
+.sources h2 { font-family: var(--mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin: 1.5rem 0 1rem; }
+.sources ol { margin: 0 0 2rem; padding-left: 1.6em; color: var(--muted); font-size: 1.05rem; line-height: 1.45; }
+.sources li { margin: 0 0 0.6em; padding-left: 0.2em; }
+.sources li::marker { font-family: var(--mono); font-size: 0.8em; color: var(--muted); }
+.sources a { text-decoration-color: var(--accent); text-underline-offset: 0.2em; }
+.sources a.back { text-decoration: none; color: var(--accent); margin-left: 0.25em; }
+.sources li:target { color: var(--text); }
