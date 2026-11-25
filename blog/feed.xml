@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kormoran Labs</title>
+  <subtitle>Notes from Kormoran Labs, makers of Minute Studio and Reverun.</subtitle>
+  <id>https://www.kormoranlabs.com/blog/</id>
+  <link rel="alternate" type="text/html" href="https://www.kormoranlabs.com/blog/"/>
+  <link rel="self" type="application/atom+xml" href="https://www.kormoranlabs.com/blog/feed.xml"/>
+  <icon>https://www.kormoranlabs.com/favicon.svg</icon>
+  <author><name>Kormoran Labs</name></author>
+  <!-- Newest first. Move <updated> here to the newest entry's date. -->
+  <updated>2026-11-25T12:00:00Z</updated>
+
+  <entry>
+    <title>Two products, both in testing</title>
+    <id>https://www.kormoranlabs.com/blog/both-products-in-testing/</id>
+    <link rel="alternate" type="text/html" href="https://www.kormoranlabs.com/blog/both-products-in-testing/"/>
+    <published>2026-11-25T12:00:00Z</published>
+    <updated>2026-11-25T12:00:00Z</updated>
+    <summary>Minute Studio and Reverun are in their first test. What they are for, and why now is the best time to tell us what you think.</summary>
+  </entry>
+</feed>
