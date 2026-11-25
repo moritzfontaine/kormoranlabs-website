@@ -308,3 +308,8 @@ footer .label a:hover { color: var(--text); }
 .sources a { text-decoration-color: var(--accent); text-underline-offset: 0.2em; }
 .sources a.back { text-decoration: none; color: var(--accent); margin-left: 0.25em; }
 .sources li:target { color: var(--text); }
+/* Illustrations in a post: the drawing on its own paper, a quiet caption below. */
+.post .illustration { margin: 2.25rem 0 2.5rem; }
+.post .illustration img { width: 100%; height: auto; border-radius: 0.75rem; border: 1px solid var(--hairline); background: #F3F1EC; }
+.post .illustration figcaption { margin-top: 0.75rem; font-style: italic; color: var(--muted); font-size: 1.1rem; line-height: 1.4; text-wrap: pretty; }
+.sources .credit { font-size: 1rem; font-style: italic; color: var(--muted); margin: 0 0 2rem; }
