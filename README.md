@@ -23,6 +23,7 @@ or with `python3 -m http.server`.
 
 1. Copy `blog/you-are-not-a-goldfish/` to `blog/<short-slug>/` and edit its `index.html`: title,
    description, canonical and `og:` URLs, the date (both the `datetime` attribute and the text), the
-   summary and the text.
+   summary and the text. Replace or delete the copied images (`*.webp`, and `og.jpg`, the 1200 x 630
+   link preview).
 2. Add the post at the top of the list in `blog/index.html`.
 3. Add an `<entry>` at the top of `blog/feed.xml` and set the feed's `<updated>` to the new date.
