@@ -8,7 +8,16 @@
   <icon>https://www.kormoranlabs.com/favicon.svg</icon>
   <author><name>Kormoran Labs</name></author>
   <!-- Newest first. Move <updated> here to the newest entry's date. -->
-  <updated>2026-11-25T12:00:00Z</updated>
+  <updated>2026-11-25T18:00:00Z</updated>
+
+  <entry>
+    <title>Brilliant courses, terrible classrooms</title>
+    <id>https://www.kormoranlabs.com/blog/brilliant-courses-terrible-classrooms/</id>
+    <link rel="alternate" type="text/html" href="https://www.kormoranlabs.com/blog/brilliant-courses-terrible-classrooms/"/>
+    <published>2026-11-25T18:00:00Z</published>
+    <updated>2026-11-25T18:00:00Z</updated>
+    <summary>Language models can now write a course in a minute that many paid courses would be proud of. Then they hand it to you in about the worst place to learn it: a chat. The hard part of teaching yourself is no longer the material. It is the classroom.</summary>
+  </entry>
 
   <entry>
     <title>You are not a goldfish</title>
