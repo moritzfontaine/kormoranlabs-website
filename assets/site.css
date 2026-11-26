@@ -318,3 +318,13 @@ footer .label a:hover { color: var(--text); }
 .post .tldr .label { margin-bottom: 0.6rem; }
 .post .tldr ul { margin: 0 0 0.75rem; padding-left: 1.1em; font-size: 1.15rem; line-height: 1.45; }
 .post .tldr li { margin: 0 0 0.45em; text-wrap: pretty; }
+
+/* Code in a post: a short sample, in the label face, on the panel. */
+.post code { font-family: var(--mono); font-size: 0.8em; }
+.post pre {
+  margin: 1.5rem 0 1.75rem; padding: 1.1rem 1.25rem; overflow-x: auto;
+  background: var(--panel); border: 1px solid var(--hairline); border-radius: 0.75rem;
+  font-size: 0.82rem; line-height: 1.6;
+}
+/* Long lines wrap on screen; in the file each field is one line. */
+.post pre code { font-size: 1em; white-space: pre-wrap; overflow-wrap: anywhere; }
